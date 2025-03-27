@@ -910,7 +910,7 @@ footer {
 
 
 /* media */
-@media screen and (hover: none) {
+@media screen and ((hover: none) or (pointer: none)) {
     .img-block {
         border: none;
         z-index: 0;
