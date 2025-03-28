@@ -1,0 +1,59 @@
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+
+
+https://ru.stackoverflow.com/questions/520368/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-%D0%B4%D0%BB%D1%8F-%D1%81%D0%BA%D0%B0%D1%87%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0
+
+
+/* 
+ .icon {
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-image: url(https://url.of.svg/....svg);
+    mask-image: url(https://url.of.svg/....svg);
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+ }
+*/
+
+
+<script>
+            const galleryBlockButtons = `
+                <div class="gallery-img-subblock">
+                  <div class="like-container scale">
+                    <h3 class="like-numbers">121</h3>
+                    <img
+                      class="gallery-like"
+                      src="img/main/heart-white.svg"
+                      alt="heart"
+                    />
+                  </div>
+                  <img
+                    class="gallery-bookmark scale"
+                    src="img/main/bookmark-white.svg"
+                    alt="bookmark"
+                  />
+                </div>
+            `;
+            const galleryBlock = document.querySelector(".gallery_block");
+            for (let i = 0; i < 10; i++) {
+              galleryBlock.innerHTML += `
+              <a
+                data-img-id="1"
+                href="#img-block-1-1"
+                class="img-block block-img-gallery-1"
+                style="background-image: url(img/gallery/image.png);"
+              >
+                ${galleryBlockButtons}
+              </a>
+              `;
+            }
+          </script>
+
+
+.gallery_block {
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
