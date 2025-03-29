@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photosphera</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="img/logo/png/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="black-block">
+      <header class="container flex-space-between">
+        <a href="#">
+          <img src="img/header/logo.svg" alt="" class="logo scale"
+        /></a>
+
+        <nav class="gap-block-20px nav-none">
+          <a class="scale" href="#"
+            ><img src="img/header/add-image.svg" alt="add-image"
+          /></a>
+          <a class="scale" href="#"
+            ><img src="img/header/see-image.svg" alt="see-image"
+          /></a>
+          <a class="scale" href="#"
+            ><img src="img/header/home.svg" alt="home"
+          /></a>
+          <a class="scale" href="#"
+            ><img class="user-img-header" src="img/users/user.png" alt="user"
+          /></a>
+        </nav>
+
+        <div onclick="burgerMenu();" class="burger-menu">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line menu-line-short"></div>
+        </div>
+      </header>
+    </div>
+
+    <!-- burger -->
+    <div class="burger none">
+      <div class="container burger-block">
+        <div class="flex-space-between">
+          <a href="#">
+            <img src="img/header/logo.svg" alt="" class="logo scale"
+          /></a>
+
+          <div onclick="burgerMenu();" class="burger-menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line menu-line-short"></div>
+          </div>
+        </div>
+
+        <a class="gap-block-10px burger-link" onclick="burgerMenu();" href="#"
+          ><img src="img/header/add-image.svg" alt="add-image" />Добавить
+          изображение
+        </a>
+        <a class="gap-block-10px burger-link" onclick="burgerMenu();" href="#"
+          ><img src="img/header/see-image.svg" alt="see-image" />Изображения</a
+        >
+        <a class="gap-block-10px burger-link" onclick="burgerMenu();" href="#"
+          ><img src="img/header/home.svg" alt="home" />Главная</a
+        >
+        <a class="gap-block-10px burger-link" onclick="burgerMenu();" href="#"
+          ><img
+            src="img/users/user.png"
+            class="user-img-header"
+            alt="user"
+          />Цветная Ромашка</a
+        >
+      </div>
+    </div>
+    <!-- burger -->
+    <!-- header -->
+
+    <!-- user-modal -->
+    <div class="modal-block flex-center user-modal-block none">
+      <div onclick="userModal();" class="block-for-close"></div>
+      <div
+        class="modal-subblock flex-column user-modal-subblock gap-block-10px"
+      >
+        <form class="modal-form gap-block-10px flex-column" method="post">
+          <img
+            src="img/users/user.png"
+            alt="user"
+            class="user-img user-img-modal"
+          />
+          <div class="photo-modal-user-chose-block">
+            <input
+              onchange="userImgSwap();"
+              type="file"
+              class="user-modal-file"
+              name="userImgUpdate"
+              id="userImgUpdate"
+            />
+            <h3 class="user-modal-photo-chose">Выбрать фото</h3>
+          </div>
+
+          <input
+            class="input"
+            type="text"
+            name="userLogin"
+            placeholder="Логин"
+            value="Цветная ромашка"
+          />
+          <input
+            class="input"
+            type="text"
+            name="userPassword"
+            placeholder="Новый пароль"
+          />
+          <input
+            class="input"
+            type="text"
+            name="userPassword"
+            placeholder="Подтвердите пароль"
+          />
+          <input
+            class="red-button top-modal-button modal-button"
+            type="submit"
+            value="Сохранить"
+          />
+        </form>
+        <button onclick="userModal();" class="black-button modal-button">
+          Отменить
+        </button>
+      </div>
+    </div>
+    <!-- user-modal -->
+
+    <!-- main -->
+    <main>
+      <!-- user -->
+      <div class="container user-block flex-space-between mobile-column">
+        <div class="user-subblock gap-block-10px">
+          <img class="user-img" src="img/users/user.png" alt="user" />
+          <h3 class="user-name">Цветная Ромашка</h3>
+        </div>
+
+        <div class="user-button-block gap-block-10px mobile-column">
+          <form method="post">
+            <input type="hidden" value="true" name="userExit" />
+            <input
+              class="black-button user-chosen-button"
+              type="submit"
+              value="Выйти"
+            />
+          </form>
+
+          <button onclick="userModal();" class="red-button user-chosen-button">
+            Редактировать профиль
+          </button>
+        </div>
+      </div>
+
+      <div class="container flex-space-between mobile-column-reverse">
+        <div class="flex-column main-title-block">
+          <h2 class="main-title wrap">Добавленные изображения</h2>
+          <div class="main-line"></div>
+        </div>
+
+        <a href="#" class="red-button width-260 user-chosen-button"
+          >Избранное</a
+        >
+      </div>
+      <!-- user -->
+
+      <!-- gallery -->
+      <div class="my-40 gallery container flex-column gap-block-20px">
+        <!-- gallery-block -->
+        <div class="gallery_block">
+          <!-- img -->
+          <a
+            id="img-block-1-1"
+            href="#img-block-1-1"
+            class="img-block block-img-gallery-1"
+          >
+            <img class="gallery-img" src="img/gallery/image.png" alt="" />
+            <div class="button-img-block">
+              <button class="red-button button-for-img">Редактировать</button>
+            </div>
+          </a>
+          <!-- img -->
+
+          <!-- img -->
+          <a
+            id="img-block-1-2"
+            href="#img-block-1-2"
+            class="img-block block-img-gallery-2"
+          >
+            <img class="gallery-img" src="img/gallery/image(1).png" alt="" />
+            <div class="button-img-block">
+              <button class="red-button button-for-img">Редактировать</button>
+            </div>
+          </a>
+          <!-- img -->
+
+          <!-- img -->
+          <a
+            id="img-block-1-3"
+            href="#img-block-1-3"
+            class="img-block block-img-gallery-3"
+          >
+            <img class="gallery-img" src="img/gallery/image(2).png" alt="" />
+            <div class="button-img-block">
+              <button class="red-button button-for-img">Редактировать</button>
+            </div>
+          </a>
+          <!-- img -->
+        </div>
+        <!-- gallery-block -->
+      </div>
+      <!-- gallery -->
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <div class="black-block my-120">
+      <footer class="flex-column container gap-block-10px">
+        <div class="flex-space-between tablet-column">
+          <div class="gap-block-20px mobile-column">
+            <a class="link-white red" href="docs/privacyPolicy.pdf"
+              >Политика конфиденциальности</a
+            >
+            <a class="link-white red" href="docs//termsOfUse.pdf"
+              >Условия использования</a
+            >
+            <a class="link-white red" href="docs/legalInformation.pdf"
+              >Правовая информация</a
+            >
+          </div>
+
+          <div class="gap-block-20px mobile-column">
+            <a
+              href="mailto:photoSpheraRu@gmail.com"
+              class="link-white-underline red"
+              >photoSpheraRu@gmail.com</a
+            >
+            <a href="tel:+79384567890" class="link-white-underline red"
+              >8 (938) 456 78-90</a
+            >
+          </div>
+        </div>
+
+        <div class="flex-space-between tablet-column-reverse">
+          <a href="#" class="link-white red"
+            >©Шарафиев Амир Рафаэльевич 2025
+          </a>
+
+          <div class="gap-block-20px">
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/whatsapp.svg" alt=""
+            /></a>
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/telegram.svg" alt=""
+            /></a>
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/wk.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- footer -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
