@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photosphera</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="img/logo/png/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="black-block">
+      <header class="container flex-space-between">
+        <a href="#">
+          <img src="img/header/logo.svg" alt="" class="logo scale"
+        /></a>
+
+        <div></div>
+      </header>
+    </div>
+    <!-- header -->
+
+    <!-- main -->
+    <main>
+      <!-- admin-menu -->
+      <div class="flex-space-between container admin-menu mobile-column">
+        <form method="post" class="flex-wrap admin-radio-block">
+          <div class="input-radio-block">
+            <input
+              value="images"
+              class="input-checkbox categories-radio none"
+              type="radio"
+              name="admin-page"
+              onclick="formSubmit(this);"
+              id="images"
+              checked
+            />
+            <label for="images">изображения </label>
+          </div>
+
+          <div class="input-radio-block">
+            <input
+              value="user"
+              class="input-checkbox none"
+              type="radio"
+              name="admin-page"
+              onclick="formSubmit(this);"
+              id="user"
+            />
+            <label for="user"> пользователи</label>
+          </div>
+
+          <div class="input-radio-block">
+            <input
+              value="user"
+              class="input-checkbox none"
+              type="radio"
+              name="admin-page"
+              onclick="formSubmit(this);"
+              id="admin"
+            />
+            <label for="admin"> модераторы</label>
+          </div>
+
+          <div class="input-radio-block">
+            <input
+              value="admin-categories"
+              id="admin-categories"
+              class="input-checkbox none"
+              type="radio"
+              name="admin-page"
+              onclick="formSubmit(this);"
+              checked
+            />
+            <label for="admin-categories">категории</label>
+          </div>
+
+          <div class="input-radio-block">
+            <input
+              value="admin-tags"
+              id="admin-tags"
+              class="input-checkbox none"
+              type="radio"
+              name="admin-page"
+              onclick="formSubmit(this);"
+              checked
+            />
+            <label for="admin-tags">тэги </label>
+          </div>
+        </form>
+
+        <form method="post">
+          <input type="hidden" value="true" name="userExit" />
+          <input
+            class="black-button user-chosen-button"
+            type="submit"
+            value="Выйти"
+          />
+        </form>
+      </div>
+      <!-- admin-menu -->
+
+      <!-- filter -->
+      <div class="flex-column container filter-form">
+        <form class="flex-column" method="get">
+          <div class="search-block gap-block-20px">
+            <img class="search-img" src="img/main/search.svg" alt="search" />
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Поиск"
+              name="searchImg"
+            />
+          </div>
+        </form>
+      </div>
+      <!-- filter -->
+
+      <!-- admin-img-block -->
+      <div class="admin-img-catalog gap-block-20px container flex-wrap">
+        <!-- card -->
+        <div class="admin-img-card flex-column gap-block-10px">
+          <img src="img/gallery/image.png" class="admin-img" alt="img" />
+          <p class="admin-img-title">Картина красками:)</p>
+          <div
+            class="admin-button-block flex-space-between gap-block-10px width-100"
+          >
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="black-button admin-img-button width-100 modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Отклонить"
+              />
+            </form>
+
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="red-button width-100 admin-img-button modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Сохранить"
+              />
+            </form>
+          </div>
+        </div>
+        <!-- card -->
+
+        <!-- card -->
+        <div class="admin-img-card flex-column gap-block-10px">
+          <img src="img/gallery/image(1).png" class="admin-img" alt="img" />
+          <p class="admin-img-title">Девушка и кот</p>
+          <div
+            class="admin-button-block flex-space-between gap-block-10px width-100"
+          >
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="black-button admin-img-button width-100 modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Отклонить"
+              />
+            </form>
+
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="red-button width-100 admin-img-button modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Сохранить"
+              />
+            </form>
+          </div>
+        </div>
+        <!-- card -->
+
+        <!-- card -->
+        <div class="admin-img-card flex-column">
+          <img src="img/gallery/image(2).png" class="admin-img" alt="img" />
+          <p class="admin-img-title">Птица в клетке</p>
+          <div
+            class="admin-button-block flex-space-between gap-block-10px width-100"
+          >
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="black-button admin-img-button width-100 modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Отклонить"
+              />
+            </form>
+
+            <form class="width-100" method="post">
+              <input type="hidden" name="delete" value="true" />
+              <input
+                class="red-button width-100 admin-img-button modal-button"
+                type="button"
+                id="button-form-submit"
+                onclick="formSubmit(this);"
+                value="Сохранить"
+              />
+            </form>
+          </div>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- admin-img-block -->
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <div class="black-block my-120">
+      <footer class="flex-column container gap-block-10px">
+        <div class="flex-space-between tablet-column">
+          <div class="gap-block-20px mobile-column">
+            <a class="link-white red" href="docs/privacyPolicy.pdf"
+              >Политика конфиденциальности</a
+            >
+            <a class="link-white red" href="docs//termsOfUse.pdf"
+              >Условия использования</a
+            >
+            <a class="link-white red" href="docs/legalInformation.pdf"
+              >Правовая информация</a
+            >
+          </div>
+
+          <div class="gap-block-20px mobile-column">
+            <a
+              href="mailto:photoSpheraRu@gmail.com"
+              class="link-white-underline red"
+              >photoSpheraRu@gmail.com</a
+            >
+            <a href="tel:+79384567890" class="link-white-underline red"
+              >8 (938) 456 78-90</a
+            >
+          </div>
+        </div>
+
+        <div class="flex-space-between tablet-column-reverse">
+          <a href="#" class="link-white red"
+            >©Шарафиев Амир Рафаэльевич 2025
+          </a>
+
+          <div class="gap-block-20px">
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/whatsapp.svg" alt=""
+            /></a>
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/telegram.svg" alt=""
+            /></a>
+            <a class="link-social-media flex-center" href="#"
+              ><img src="img/footer/wk.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- footer -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
